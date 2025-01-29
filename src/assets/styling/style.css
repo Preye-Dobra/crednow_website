@@ -1,0 +1,221 @@
+:root{
+    --active: #00CCFF;
+    --navyblue: #E6FAFF;
+    --background-main: #D9F7FF;
+    --label: #004759;
+    --linear-gradient: linear-gradient(136.43deg, #FFFFFF 8.82%, #F2F0F0 101.68%);
+    --custom-navbar-height: 90px;
+}
+@font-face {
+    font-display: swap;
+    font-family: "fira-sans";
+    font-style: normal;
+    font-weight: 400; /* Regular */
+    src: url("../fonts/FiraSans-Regular.ttf") format("woff");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "fira-sans";
+    font-style: normal;
+    font-weight: 500; /* Medium */
+    src: url("../fonts/FiraSans-Medium.ttf") format("woff");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "fira-sans";
+    font-style: normal;
+    font-weight: 700; /* Bold */
+    src: url("../fonts/FiraSans-Bold.ttf") format("woff");
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "fira-sans", sans-serif;
+    font-weight: 400;
+    background-color: var(--navyblue);
+}
+p{
+    font-size: 85%;
+}
+.xui-py-12{
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+}
+.color-active{
+    color: var(--active);
+}
+.bg-active{
+    background-color: var(--active);
+}
+.bg-main{
+    background-color: var(--background-main);
+}
+.bg-navyblue{
+    background-color: var(--navyblue);
+}
+.bg-label{
+    background-color: var(--label);
+}
+.color-label{
+    color: var(--label);
+}
+.linear-gradient{
+    background: var(--linear-gradient);
+}
+.crednow-navbar{
+    height: var(--custom-navbar-height);
+    background-color: var(--navyblue);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: none;
+    z-index: 2;
+}
+.xui-navbar .links ul li a.active-link{
+    color: var(--active);
+    position: relative;
+}
+.xui-navbar .links ul li a.active-link::before{
+    position: absolute;
+    content: "";
+    height: 1.2px;
+    width: 100%;
+    background-color: var(--active);
+    bottom: -7px;
+    left: 0;
+}
+.crednow-container > img{
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+    z-index: -1;
+}
+.crednow-header-left{
+    /* padding: 12rem 0 13rem 0; */
+}
+.benefits-holder{
+    display: flex;
+}
+.benefit-left{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.benefit-left::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    background: #D5D5D5;
+    height: 100%;
+}
+.benefit-left span{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FFF;
+    z-index: 1;
+}
+.benefit-right{
+    width: calc(100% - 100px);
+    margin-bottom: 2.5rem;
+    display: inline-block;
+}
+.benefits-holder:last-child .benefit-left::before{
+    height: 60%;
+}
+.testimonial-swiper .swiper-wrapper{
+    margin-left: 5rem;
+}
+.ca-testimonial-card {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    box-shadow: 0px 2.77px 2.21px 0px #00000005;
+
+    box-shadow: 0px 6.65px 5.32px 0px #00000007;
+
+    box-shadow: 0px 12.52px 10.02px 0px #00000009;
+    cursor: grab;
+
+}
+.ca-testimonial-card .profile {
+    width: 32px;
+    height: 32px;
+}
+.ca-testimonial-card .testimony-box {
+    padding: 1rem;
+    background-color: var(--purple-light);
+    color: var(--purple-dark);
+}
+.crednow-footer ul li{
+    list-style: none;
+}
+.crednow-footer ul li a{
+    text-decoration: none;
+    font-size: 85%;
+    opacity: .8;
+    margin: .5rem 0;
+    color: #FFF;
+    display: inline-block;
+}
+.crednow-footer .footer-pattern{
+    padding: 0;
+    height: 120px;
+    position: relative;
+}
+.crednow-footer .footer-pattern-content{
+    position: absolute;
+    width: 85%;
+    top: 55%;
+    left: 0;
+    /* display: inline-block; */
+    margin: 0 7rem;
+}
+.crednow-contact-container{
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+}
+.crednow-contact-form input, .crednow-contact-form textarea{
+    padding: .6rem;
+    border: 1px solid #CCCCD8 !important;
+}
+.crednow-contact-form textarea{
+    height: 120px;
+}
+.crednow-contact-info::before{
+    position: absolute;
+    content: "";
+    background: linear-gradient(108.57deg, #004759 -7.18%, #0098BF 78.16%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    bottom: -50px;
+    right: -30px;
+}
+.what-we-do-holder{
+    background: var(--linear-gradient);
+}
+@media screen and (max-width: 1024px){
+    p{
+        font-size: 80%;
+    }
+    .xui-navbar .menu span {
+        background-color: #FFF;
+    }
+    .xui-py-12{
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+    .crednow-container > img{
+        right: -20px;
+        max-width: 250px;
+    }
+    .what-we-do-holder{
+        background: none;
+        flex-direction: column-reverse;
+    }
+}
