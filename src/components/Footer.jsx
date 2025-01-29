@@ -21,8 +21,8 @@ const Footer = () => {
                         <div>
                             <h3 className='xui-font-sz-150 xui-font-w-400 xui-opacity-8'>Quick Links</h3>
                             <ul className='xui-mt-1 xui-p-none'>
-                                <li><Link to='/'>About Us</Link></li>
-                                <li><Link to='/'>Our Services</Link></li>
+                                <li><Link to='/about'>About Us</Link></li>
+                                <li><Link to='/services'>Our Services</Link></li>
                                 <li><Link to='/'>Privacy Policy</Link></li>
                                 <li><Link to='/'>Terms and Conditions</Link></li>
                             </ul>
