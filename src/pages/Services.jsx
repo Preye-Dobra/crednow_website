@@ -9,7 +9,7 @@ const Services = () => {
         <div>
             <Header />
             <LoanServices />
-            <img src={Swirl} alt="" className='xui-img-200 xui-mx-auto' />
+            <img src={Swirl} alt="" className='xui-img-200 xui-mx-auto xui-lg-d-block xui-d-none' />
             <CreditServices />
         </div>
     );

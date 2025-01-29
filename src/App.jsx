@@ -26,7 +26,7 @@ function App() {
           <Route path='*' element={<h1>No Match</h1>} />
         </Routes>
       </Suspense>
-      <section className='xui-pb-3 xui-pt-10 xui-container'>
+      <section className='xui-pb-3 xui-lg-pt-10 xui-pt-none xui-container'>
           <GetStarted />
       </section>
       <FAQs />

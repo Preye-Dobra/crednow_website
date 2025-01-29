@@ -38,7 +38,7 @@ body{
     background-color: var(--navyblue);
 }
 p{
-    font-size: 85%;
+    font-size: 95%;
 }
 .xui-py-12{
     padding-top: 12rem;
@@ -74,6 +74,9 @@ p{
     background: none;
     z-index: 2;
 }
+.xui-navbar .links .main ul li, .xui-navbar .links .main ul li a{
+    color: #FFF;
+}
 .xui-navbar .links ul li a.active-link{
     color: var(--active);
     position: relative;
@@ -93,14 +96,14 @@ p{
     bottom: 0;
     z-index: -1;
 }
-.crednow-header-left{
-    /* padding: 12rem 0 13rem 0; */
+.value-holder{
+    border: 3px solid #FFF;
 }
 .benefits-holder{
     display: flex;
 }
 .benefit-left{
-    width: 100px;
+    /* width: 100px; */
     display: flex;
     justify-content: center;
     position: relative;
@@ -112,6 +115,17 @@ p{
     background: #D5D5D5;
     height: 100%;
 }
+.normal-nav{
+    background-color: transparent;
+}
+.scrolled-nav{
+    background: #00475926;
+    /* border: 1px solid; */
+    border: 1px solid;
+    /* border: 10px solid transparent; */
+    -webkit-mask-image: linear-gradient(0deg, #0098BF, #004759);
+    backdrop-filter: blur(35px);
+}
 .benefit-left span{
     width: 40px;
     height: 40px;
@@ -120,15 +134,23 @@ p{
     z-index: 1;
 }
 .benefit-right{
-    width: calc(100% - 100px);
+    width: calc(100% - 40px);
+    padding-left: 1rem;
     margin-bottom: 2.5rem;
     display: inline-block;
+}
+.crednow-contact-info{
+    min-height: 400px;
+    height: 400px;
 }
 .benefits-holder:last-child .benefit-left::before{
     height: 60%;
 }
 .testimonial-swiper .swiper-wrapper{
     margin-left: 5rem;
+}
+.crednow-header.home{
+    background-position: right;
 }
 .ca-testimonial-card {
     background-color: #FFFFFF;
@@ -201,21 +223,53 @@ p{
 }
 @media screen and (max-width: 1024px){
     p{
-        font-size: 80%;
+        font-size: 85%;
+    }
+    .testimonial-swiper .swiper-wrapper{
+        margin-left: 0;
     }
     .xui-navbar .menu span {
         background-color: #FFF;
     }
+    .xui-navbar .menu.animate span {
+        background-color: var(--label);
+    }
+    .xui-navbar .links .main ul li, .xui-navbar .links .main ul li a{
+        width: auto;
+        color: var(--label);
+    }
+    .xui-navbar .links ul li a.active-link{
+        color: var(--active);
+    }
     .xui-py-12{
-        padding-top: 8rem;
-        padding-bottom: 8rem;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
     }
     .crednow-container > img{
         right: -20px;
         max-width: 250px;
     }
     .what-we-do-holder{
-        background: none;
+        background: transparent;
         flex-direction: column-reverse;
+    }
+    .crednow-footer .footer-pattern{
+        height: 70px;
+    }
+    .crednow-footer .footer-pattern-content{
+        margin: 0 1rem;
+    }
+    .crednow-footer .footer-pattern-content svg{
+        width: 14px;
+        height: 14px;
+    }
+    .xui-flex-dir-reverse-column{
+        flex-direction: column-reverse;
+    }
+    .value-holder{
+        border: none;
+    }
+    .crednow-contact-container {
+        max-width: 330px;
     }
 }

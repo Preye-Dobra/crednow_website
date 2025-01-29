@@ -7,7 +7,7 @@ const Testimonials = () => {
     return (
         <section className='xui-py-1' style={{paddingRight: '0'}}>
                 <div className='xui-text-center'>
-                    <h3 className='xui-font-sz-200 color-label xui-font-w-400'>Testimonials</h3>
+                    <h3 className='xui-lg-font-sz-200 xui-font-sz-150 color-label xui-lg-font-w-400 xui-font-w-600'>Testimonials</h3>
                     <p className='color-label xui-mt-half xui-lg-w-fluid-50 xui-w-fluid-100 xui-mx-auto xui-line-height-1-half'>See How We've Empowered Real Users to Achieve Their Financial Goals</p>
                 </div>
                 <div className='xui-mt-2'>
@@ -19,17 +19,17 @@ const Testimonials = () => {
                             delay: 2500,
                             disableOnInteraction: false,
                         }}
-                        // breakpoints={{
-                        //     320: {
-                        //         slidesPerView: 1.2,
-                        //         slidesOffsetBefore: 8,
-                        //         slidesOffsetAfter: 8,
-                        //         spaceBetween: 12,
-                        //     },
-                        //     1024: {
-                        //         slidesPerView: 'auto',
-                        //     },
-                        // }}
+                        breakpoints={{
+                            320: {
+                                slidesPerView: 1.2,
+                                slidesOffsetBefore: 8,
+                                slidesOffsetAfter: 8,
+                                spaceBetween: 12,
+                            },
+                            1024: {
+                                slidesPerView: 3,
+                            },
+                        }}
                     >
                         <SwiperSlide>
                             <TestimonialCard text='CredNow made it so easy for me to get the funds I needed for my home renovation. Their process was quick and transparent. Highly recommend!' initial='JB' name='Jane Bamidele' />

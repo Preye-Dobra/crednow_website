@@ -25,8 +25,8 @@ const Header = () => {
         <>
             <section className='xui-bg-sz-cover xui-bg-pos-center crednow-header' style={{backgroundImage: `url('${HeaderBG}')`}}>
                 <div className='xui-py-12 xui-w-fluid-100 xui-h-fluid-100 xui-container' style={{backgroundColor: 'rgba(0, 71, 89, .8)'}}>
-                    <h1 className='xui-lg-font-sz-300 xui-font-sz-250 color-active xui-font-w-400'>Contact Us</h1>
-                    <p className='xui-opacity-8 xui-line-height-1-half xui-lg-w-fluid-50 xui-w-fluid-100 xui-font-sz-120'>Have questions or need assistance? We’re here to help! Reach out to us via the following methods:</p>
+                    <h1 className='xui-lg-font-sz-300 xui-font-sz-180 color-active xui-font-w-400'>Contact Us</h1>
+                    <p className='xui-opacity-8 xui-line-height-1-half xui-lg-w-fluid-50 xui-w-fluid-100 xui-lg-font-sz-120 xui-font-sz-85'>Have questions or need assistance? We’re here to help! Reach out to us via the following methods:</p>
                 </div>
             </section>
             <section className='xui-mt--8'>
@@ -37,39 +37,39 @@ const Header = () => {
                                 <div className='xui-w-30 xui-d-flex xui-flex-ai-center xui-flex-jc-center'>
                                     <Phone />
                                 </div>
-                                <div className='xui-pl-half'>
-                                    <p>+234 123 456 7890</p>
+                                <div className='xui-pl-half' style={{width: 'calc(100% - 30px)'}}>
+                                    <p className='xui-font-sz-85'>+234 123 456 7890</p>
                                 </div>
                             </div>
                             <div className='xui-d-flex xui-flex-ai-center xui-mt-1-half'>
                                 <div className='xui-w-30 xui-d-flex xui-flex-ai-center xui-flex-jc-center'>
                                     <Mail />
                                 </div>
-                                <div className='xui-pl-half'>
-                                    <p>support@credilityfin.com</p>
+                                <div className='xui-pl-half' style={{width: 'calc(100% - 30px)'}}>
+                                    <p className='xui-font-sz-85'>support@credilityfin.com</p>
                                 </div>
                             </div>
                             <div className='xui-d-flex xui-flex-ai-center xui-mt-1-half'>
                                 <div className='xui-w-30 xui-d-flex xui-flex-ai-center xui-flex-jc-center'>
                                     <Location />
                                 </div>
-                                <div className='xui-pl-half'>
-                                    <p>8 Opebi Road, Ikeja, Lagos, Nigeria</p>
+                                <div className='xui-pl-half' style={{width: 'calc(100% - 30px)'}}>
+                                    <p className='xui-font-sz-85'>8 Opebi Road, Ikeja, Lagos, Nigeria</p>
                                 </div>
                             </div>
                             <div className='xui-d-flex xui-flex-ai-center xui-mt-1-half'>
                                 <div className='xui-w-30 xui-d-flex xui-flex-ai-center xui-flex-jc-center'>
                                     <Calendar />
                                 </div>
-                                <div className='xui-pl-half'>
-                                    <p>Monday to Saturday, 9 AM - 5 PM WAT</p>
+                                <div className='xui-pl-half' style={{width: 'calc(100% - 30px)'}}>
+                                    <p className='xui-font-sz-85'>Monday to Saturday, 9 AM - 5 PM WAT</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className='xui-lg-col-8 xui-col-12 xui-lg-pl-1 xui-pl-none'>
                         <form className='xui-form crednow-contact-form xui-mt-1' onSubmit={onSubmitHandler}>
-                            <div className='xui-d-grid xui-lg-grid-col-2 xui-grid-col-1 xui-grid-gap-1'>
+                            <div className='xui-d-grid xui-grid-col-2 xui-grid-gap-1'>
                                 <div className="form-box">
                                     <label>Full Name</label>
                                     <input type="text" ref={name} id="name" placeholder='Please enter' className="xui-bdr-rad-2" required/>

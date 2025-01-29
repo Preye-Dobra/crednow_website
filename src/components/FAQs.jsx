@@ -26,7 +26,7 @@ const FAQs = () => {
         <>
         <section className="xui-py-3 xui-container xui-overflow-y-hidden">
             <div className='xui-text-center'>
-                <h3 className='xui-font-sz-200 color-label xui-font-w-400'>Frequently Asked Questions</h3>
+                <h3 className='xui-lg-font-sz-200 xui-font-sz-150 color-label xui-lg-font-w-400 xui-font-w-600'>Frequently Asked Questions</h3>
                 <p className='color-label xui-mt-half xui-lg-w-fluid-50 xui-w-fluid-100 xui-mx-auto xui-line-height-1-half'>Get your answers to common questions: Everything You Need to Know About Our Loans</p>
             </div>
             <Accordionitem data={faqData}/>

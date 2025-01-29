@@ -14,7 +14,7 @@ const Accordionitem = ({ data }) => {
       {data.map((item, index) => (
         <div className='xui-mt-1-half xui-cursor-pointer xui-p-1 xui-bdr-rad-half xui-bg-white' key={index} onClick={() => toggleItem(index)}>
           <div className={'xui-d-flex xui-flex-ai-center xui-flex-jc-space-between ' + (activeIndex === index ? 'begorah-bg-blue-iii' : 'xui-bg-none')}>
-            <h3 className='xui-lg-font-sz-100 color-label xui-font-w-500 '>{item.question}</h3>
+            <h3 className='xui-lg-font-sz-100 xui-font-sz-85 color-label xui-font-w-500 ' style={{width: 'calc(100% - 32px)'}}>{item.question}</h3>
             {activeIndex !== index &&
             <AddCircle />
             
