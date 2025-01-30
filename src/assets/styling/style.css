@@ -229,6 +229,9 @@ p{
     .testimonial-swiper .swiper-wrapper{
         margin-left: 1rem;
     }
+    .crednow-navbar{
+        height: 70px;
+    }
     .xui-navbar .menu span {
         background-color: #FFF;
     }

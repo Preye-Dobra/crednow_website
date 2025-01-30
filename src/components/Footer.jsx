@@ -61,7 +61,7 @@ const Footer = () => {
                                         <Mail />
                                     </div>
                                     <div className='xui-pl-half' style={{ width: 'calc(100% - 30px)' }}>
-                                        <p className='xui-opacity-8 xui-font-sz-85'>support@crednow.com</p>
+                                        <p className='xui-opacity-8 xui-font-sz-85'>support@crednow.ng</p>
                                     </div>
                                 </div>
                                 <div className='xui-d-flex xui-flex-ai-center xui-mt-1-half'>
@@ -69,7 +69,7 @@ const Footer = () => {
                                         <Location />
                                     </div>
                                     <div className='xui-pl-half' style={{ width: 'calc(100% - 30px)' }}>
-                                        <p className='xui-opacity-8 xui-font-sz-85'>8 Opebi Road, Ikeja, Lagos, Nigeria</p>
+                                        <p className='xui-opacity-8 xui-font-sz-85'>38 Opebi Road, Ikeja, Lagos, Nigeria</p>
                                     </div>
                                 </div>
                                 <div className='xui-d-flex xui-flex-ai-center xui-mt-1-half'>
