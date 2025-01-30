@@ -5,7 +5,7 @@ import TestimonialCard from '../TestimonialCard';
 
 const Testimonials = () => {
     return (
-        <section className='xui-py-1' style={{paddingRight: '0'}}>
+        <section className='xui-pt-1 xui-pb-2'>
                 <div className='xui-text-center'>
                     <h3 className='xui-lg-font-sz-200 xui-font-sz-150 color-label xui-lg-font-w-400 xui-font-w-600'>Testimonials</h3>
                     <p className='color-label xui-mt-half xui-lg-w-fluid-50 xui-w-fluid-100 xui-mx-auto xui-line-height-1-half'>See How We've Empowered Real Users to Achieve Their Financial Goals</p>

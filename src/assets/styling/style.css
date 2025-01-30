@@ -123,7 +123,7 @@ p{
     /* border: 1px solid; */
     border: 1px solid;
     /* border: 10px solid transparent; */
-    -webkit-mask-image: linear-gradient(0deg, #0098BF, #004759);
+    /* -webkit-mask-image: linear-gradient(0deg, #0098BF, #004759); */
     backdrop-filter: blur(35px);
 }
 .benefit-left span{
@@ -147,7 +147,7 @@ p{
     height: 60%;
 }
 .testimonial-swiper .swiper-wrapper{
-    margin-left: 5rem;
+    margin-left: 4rem;
 }
 .crednow-header.home{
     background-position: right;
@@ -161,6 +161,7 @@ p{
 
     box-shadow: 0px 12.52px 10.02px 0px #00000009;
     cursor: grab;
+    height: 250px;
 
 }
 .ca-testimonial-card .profile {
@@ -226,7 +227,7 @@ p{
         font-size: 85%;
     }
     .testimonial-swiper .swiper-wrapper{
-        margin-left: 0;
+        margin-left: 1rem;
     }
     .xui-navbar .menu span {
         background-color: #FFF;
@@ -271,5 +272,9 @@ p{
     }
     .crednow-contact-container {
         max-width: 330px;
+    }
+    .ca-testimonial-card{
+        border-radius: 1rem;
+        padding: 1rem 1rem 2rem 1rem;
     }
 }

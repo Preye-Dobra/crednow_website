@@ -53,7 +53,7 @@ const Footer = () => {
                                         <Phone />
                                     </div>
                                     <div className='xui-pl-half' style={{ width: 'calc(100% - 30px)' }}>
-                                        <p className='xui-opacity-8 xui-font-sz-85'>+234 123 456 7890</p>
+                                        <p className='xui-opacity-8 xui-font-sz-85'>+234 901 347 1329</p>
                                     </div>
                                 </div>
                                 <div className='xui-d-flex xui-flex-ai-center xui-mt-1-half'>
@@ -61,7 +61,7 @@ const Footer = () => {
                                         <Mail />
                                     </div>
                                     <div className='xui-pl-half' style={{ width: 'calc(100% - 30px)' }}>
-                                        <p className='xui-opacity-8 xui-font-sz-85'>support@credilityfin.com</p>
+                                        <p className='xui-opacity-8 xui-font-sz-85'>support@crednow.com</p>
                                     </div>
                                 </div>
                                 <div className='xui-d-flex xui-flex-ai-center xui-mt-1-half'>
