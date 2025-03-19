@@ -41,8 +41,8 @@ const Footer = () => {
                             <ul className='xui-mt-1 xui-p-none'>
                                 <li><Link to='/about'>About Us</Link></li>
                                 <li><Link to='/services'>Our Services</Link></li>
-                                <li><Link to='/'>Privacy Policy</Link></li>
-                                <li><Link to='/'>Terms and Conditions</Link></li>
+                                <li><Link to='/privacy-policies'>Privacy Policy</Link></li>
+                                <li><Link to='/terms-and-conditions'>Terms and Conditions</Link></li>
                             </ul>
                         </div>
                         <div>
