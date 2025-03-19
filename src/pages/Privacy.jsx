@@ -8,7 +8,6 @@ const Privacy = () => {
         <div>
             <Header />
             <PrivacyContent />
-            {/* <Values /> */}
         </div>
     );
 };
