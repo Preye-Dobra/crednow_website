@@ -103,11 +103,28 @@ const PrivacyContent = () => {
                         •　 maintain a Data Base of all CFSL data collection and processing operations of CFSL.
                         <br /><br />
                         6.Your rights
-                        You have the right to make a request to access and delete the personal data we hold about you, to rectify any personal data held about you that is inaccurate, the right to data portability and the right to request the suspension of the processing of your personal data. In case you wish to exercise your rights or you have other questions, comments and requests regarding this Policy, you can contact us at dpo@credilityfin.com In the event that you wish to make a complaint about how we process your personal data, please contact us in the first instance at support@crednow.ng and we will endeavor to deal with your request as soon as possible. This is without prejudice to your right to launch a claim with your data protection authority or follow the dispute resolution process provided in the Terms of Service. Cross-border data transfer
+                        You have the right to make a request to access and delete the personal data we hold about you, to rectify any personal data held about you that is inaccurate, the right to data portability and the right to request the suspension of the processing of your personal data. In case you wish to exercise your rights or you have other questions, comments and requests regarding this Policy, you can contact us at support@crednow.com In the event that you wish to make a complaint about how we process your personal data, please contact us in the first instance at support@crednow.ng and we will endeavor to deal with your request as soon as possible. This is without prejudice to your right to launch a claim with your data protection authority or follow the dispute resolution process provided in the Terms of Service. Cross-border data transfer
 
                         Where your personal data is to be transferred to a country outside Nigeria, we will put adequate measures in place to ensure the security of such Personal Data. In particular, CFSL will, among other things, conduct a detailed assessment of whether the said country is among the National Information Technology Development Agency (NITDA) White-Listed Countries with adequate data protection laws. In case where the destination country is not among
 
                         White-Listed Countries, we will only transfer Personal Data out of Nigeria on one of the following conditions. Your consent has been obtained. The transfer is necessary for the performance of a contract between us and you or implementation of pre-contractual measures taken at your request. The transfer is necessary to conclude a contract between us and a third party in your best interest. The transfer is necessary for reason(s) of public interest. The transfer is for the establishment, exercise or defense of legal claims. The transfer is necessary in order to protect your vital interests of or other persons, where you are physically or legally incapable of giving consent. Where the recipient country is not one of the White-Listed countries and none of the conditions stipulated in Section M of this Policy is met, we will engage with NITDA and the Office of the Honorable Attorney General of the Federation (HAGF) for approval with respect to such transfer. We will take all necessary steps to ensure that the Personal Data is transmitted in a safe and secure manner. Details of the protection given to your information when it is transferred outside Nigeria shall be provided to you upon request. Where the recipient country is not one of the White-Listed countries and none of the conditions stipulated in Section M of this Policy is met, we will engage with NITDA and the Office of the Honorable Attorney General of the Federation (HAGF) for approval with respect to such transfer.
+
+                        <br /><br />
+
+                        Requesting Data Deletion<br /><br />
+                        Users who wish to delete their data from CredNow can request deletion by contacting us at support@crednow.ng with the subject "Data Deletion Request".
+                        <br />
+
+                        Data That Will Be Deleted:
+                        <br /><br />
+
+                        Personal Information (Name, Email, Phone Number, Contact Details)
+                        <br />
+                        Loan History
+                        <br />
+                        Data Retention:
+                        <br />
+                        Some data may be retained for legal, regulatory, or security reasons for up to 3 months before complete removal.
 
                     </p>
                 </div>
