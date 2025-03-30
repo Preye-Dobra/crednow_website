@@ -95,7 +95,7 @@ const Footer = () => {
             </div>
             <div className='xui-bg-sz-cover xui-py-3 xui-container footer-pattern' style={{ backgroundImage: `url(${backgroundImage})` }}>
                 <div className='xui-d-flex xui-flex-jc-space-between xui-flex-ai-center footer-pattern-content'>
-                    <p className='xui-opacity-8 xui-lg-font-sz-85 xui-font-sz-65'>Copyright@Crednow.2024. All rights reserved</p>
+                    <p className='xui-opacity-8 xui-lg-font-sz-85 xui-font-sz-65'>Copyright@Crednow.2025. All rights reserved</p>
                     <div className='xui-d-flex xui-flex-ai-center xui-grid-gap-1'>
                         <Link className='xui-text-dc-none' to={'https://web.facebook.com/CredNow.ng'} target='_blank'><Facebook /></Link>
                         {/* <Link className='xui-text-dc-none' to={'/'} target='_blank'><X /></Link> */}
