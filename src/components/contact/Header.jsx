@@ -8,6 +8,7 @@ import ErrorAlert from '../alerts/Error';
 import SuccessAlert from '../alerts/Success';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+// import emailjs from "emailjs-com";
 
 const Header = () => {
     const { handleSubmit, register, formState: { errors, isValid }, reset } = useForm();
@@ -15,10 +16,43 @@ const Header = () => {
     const [successErrMsg, setSuccessErrMsg] = useState('');
     const [isDisabled, setIsDisabled] = useState(false);
 
-    const sendEmail = handleSubmit(async (data) => {
+    // const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+    // const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    // const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+
+    // const sendEmail = (formData) => {
+    //     setIsDisabled(true);
+
+    //     emailjs.send(
+    //         "your_service_id",
+    //         "your_template_id",
+    //         {
+    //             name: formData.name,
+    //             email: formData.email,
+    //             phone: formData.phone,
+    //             subject: formData.subject,
+    //             message: formData.message,
+    //         },
+    //         publicKey // Replace with your EmailJS user/public key
+    //     )
+    //         .then((response) => {
+    //             console.log("SUCCESS!", response.status, response.text);
+    //             alert("Message sent successfully!");
+    //             reset(); // Reset form after successful submission
+    //         })
+    //         .catch((err) => {
+    //             console.error("FAILED...", err);
+    //             alert("Failed to send message. Try again.");
+    //         })
+    //         .finally(() => {
+    //             setIsDisabled(false);
+    //         });
+    // };
+
+    const sendEmailBrevo = handleSubmit(async (data) => {
         setIsDisabled(true);
         const BREVO_API_KEY = import.meta.env.VITE_BREVO_API_KEY;
-    
+
         const messagePayload = {
             email: data.email,
             attributes: {
@@ -30,7 +64,7 @@ const Header = () => {
             listIds: [6], // Adjust the list ID as needed
             updateEnabled: false,
         };
-    
+
         const emailOptions = {
             sender: {
                 name: "Crednow Team",
@@ -55,7 +89,7 @@ const Header = () => {
                 </html>
             `,
         };
-    
+
         try {
             // Send contact to Brevo
             const brevoContactRes = await axios.post(
@@ -68,7 +102,7 @@ const Header = () => {
                     },
                 }
             );
-    
+
             if (brevoContactRes.status === 201) {
                 // Send email via Brevo
                 await axios.post(
@@ -100,11 +134,11 @@ const Header = () => {
             setIsDisabled(false);
         }
     });
-    
+
     return (
         <>
-            <section className='xui-bg-sz-cover xui-bg-pos-center crednow-header' style={{backgroundImage: `url('${HeaderBG}')`}}>
-                <div className='xui-py-12 xui-w-fluid-100 xui-h-fluid-100 xui-container' style={{backgroundColor: 'rgba(0, 71, 89, .8)'}}>
+            <section className='xui-bg-sz-cover xui-bg-pos-center crednow-header' style={{ backgroundImage: `url('${HeaderBG}')` }}>
+                <div className='xui-py-12 xui-w-fluid-100 xui-h-fluid-100 xui-container' style={{ backgroundColor: 'rgba(0, 71, 89, .8)' }}>
                     <h1 className='xui-lg-font-sz-300 xui-font-sz-180 color-active xui-font-w-400'>Contact Us</h1>
                     <p className='xui-opacity-8 xui-line-height-1-half xui-lg-w-fluid-50 xui-w-fluid-100 xui-lg-font-sz-120 xui-font-sz-85'>Have questions or need assistance? We’re here to help! Reach out to us via the following methods:</p>
                 </div>
@@ -117,7 +151,7 @@ const Header = () => {
                                 <div className='xui-w-30 xui-d-flex xui-flex-ai-center xui-flex-jc-center'>
                                     <Phone />
                                 </div>
-                                <div className='xui-pl-half' style={{width: 'calc(100% - 30px)'}}>
+                                <div className='xui-pl-half' style={{ width: 'calc(100% - 30px)' }}>
                                     <p className='xui-font-sz-85'>+234 901 347 1329</p>
                                 </div>
                             </div>
@@ -125,7 +159,7 @@ const Header = () => {
                                 <div className='xui-w-30 xui-d-flex xui-flex-ai-center xui-flex-jc-center'>
                                     <Mail />
                                 </div>
-                                <div className='xui-pl-half' style={{width: 'calc(100% - 30px)'}}>
+                                <div className='xui-pl-half' style={{ width: 'calc(100% - 30px)', cursor: 'pointer' }} onClick={() => window.location.href = 'mailto:support@crednow.ng'} >
                                     <p className='xui-font-sz-85'>support@crednow.ng</p>
                                 </div>
                             </div>
@@ -133,7 +167,7 @@ const Header = () => {
                                 <div className='xui-w-30 xui-d-flex xui-flex-ai-center xui-flex-jc-center'>
                                     <Location />
                                 </div>
-                                <div className='xui-pl-half' style={{width: 'calc(100% - 30px)'}}>
+                                <div className='xui-pl-half' style={{ width: 'calc(100% - 30px)' }}>
                                     <p className='xui-font-sz-85'>38 Opebi Road, Ikeja, Lagos, Nigeria</p>
                                 </div>
                             </div>
@@ -141,39 +175,39 @@ const Header = () => {
                                 <div className='xui-w-30 xui-d-flex xui-flex-ai-center xui-flex-jc-center'>
                                     <Calendar />
                                 </div>
-                                <div className='xui-pl-half' style={{width: 'calc(100% - 30px)'}}>
+                                <div className='xui-pl-half' style={{ width: 'calc(100% - 30px)' }}>
                                     <p className='xui-font-sz-85'>Monday to Saturday, 9 AM - 5 PM WAT</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className='xui-lg-col-8 xui-col-12 xui-lg-pl-1 xui-pl-none'>
-                        <form className='xui-form crednow-contact-form xui-mt-1' onSubmit={handleSubmit(sendEmail)} autoComplete="off" noValidate>
+                        <form className='xui-form crednow-contact-form xui-mt-1' onSubmit={handleSubmit(sendEmailBrevo)} autoComplete="off" noValidate>
                             <div className='xui-d-grid xui-grid-col-2 xui-grid-gap-1'>
                                 <div className="form-box">
                                     <label>Full Name</label>
-                                    <input {...register('name', {required: "This field is required"})} type="text" id="name" placeholder='Please enter' className="xui-bdr-rad-2" required/>
+                                    <input {...register('name', { required: "This field is required" })} type="text" id="name" placeholder='Please enter' className="xui-bdr-rad-2" required />
                                     {errors.name && <span className="xui-badge xui-badge-danger xui-d-block xui-w-fluid-100 xui-bdr-rad-2 xui-lg-font-sz-90 xui-font-sz-80 xui-mt-1">{errors.name.message}</span>}
                                 </div>
                                 <div className="form-box">
                                     <label>Email Address</label>
-                                    <input {...register('email', {required: 'Please enter your email', pattern: {value: /^\S+@\S+$/i,message: 'Invalid email address'}})} type="email" id="email" placeholder='Please enter' className="xui-bdr-rad-2" required/>
+                                    <input {...register('email', { required: 'Please enter your email', pattern: { value: /^\S+@\S+$/i, message: 'Invalid email address' } })} type="email" id="email" placeholder='Please enter' className="xui-bdr-rad-2" required />
                                     {errors.email && <span className="xui-badge xui-badge-danger xui-d-block xui-w-fluid-100 xui-bdr-rad-2 xui-lg-font-sz-90 xui-font-sz-80 xui-mt-1">{errors.email.message}</span>}
                                 </div>
                                 <div className="form-box">
                                     <label>Phone Number</label>
-                                    <input {...register('phone', {required: 'This field is required', pattern: {value: /^[0-9]{10,15}$/, message: 'Phone number must be 10–15 digits'}})} type="tel" id="phone" placeholder='Please enter' className="xui-bdr-rad-2" required/>
+                                    <input {...register('phone', { required: 'This field is required', pattern: { value: /^[0-9]{10,15}$/, message: 'Phone number must be 10–15 digits' } })} type="tel" id="phone" placeholder='Please enter' className="xui-bdr-rad-2" required />
                                     {errors.phone && <span className="xui-badge xui-badge-danger xui-d-block xui-w-fluid-100 xui-bdr-rad-2 xui-lg-font-sz-90 xui-font-sz-80 xui-mt-1">{errors.phone.message}</span>}
                                 </div>
                                 <div className="form-box">
                                     <label>Subject</label>
-                                    <input {...register('subject', {required: "This field is required"})} type="text" id="subject" placeholder='Please enter' className="xui-bdr-rad-2" required/>
+                                    <input {...register('subject', { required: "This field is required" })} type="text" id="subject" placeholder='Please enter' className="xui-bdr-rad-2" required />
                                     {errors.subject && <span className="xui-badge xui-badge-danger xui-d-block xui-w-fluid-100 xui-bdr-rad-2 xui-lg-font-sz-90 xui-font-sz-80 xui-mt-1">{errors.subject.message}</span>}
                                 </div>
                             </div>
                             <div className="form-box xui-mt-1">
                                 <label>Message</label>
-                                <textarea {...register('message', {required: "This field is required"})} id="message" placeholder='Write your message here' className="xui-bdr-rad-1" required></textarea>
+                                <textarea {...register('message', { required: "This field is required" })} id="message" placeholder='Write your message here' className="xui-bdr-rad-1" required></textarea>
                                 {errors.message && <span className="xui-badge xui-badge-danger xui-d-block xui-w-fluid-100 xui-bdr-rad-2 xui-lg-font-sz-90 xui-font-sz-80 xui-mt-1">{errors.message.message}</span>}
                             </div>
                             <div className="form-box">

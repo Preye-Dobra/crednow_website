@@ -60,7 +60,7 @@ const Footer = () => {
                                     <div className='xui-w-30 xui-d-flex xui-flex-ai-center xui-flex-jc-center'>
                                         <Mail />
                                     </div>
-                                    <div className='xui-pl-half' style={{ width: 'calc(100% - 30px)' }}>
+                                    <div className='xui-pl-half' style={{ width: 'calc(100% - 30px)', cursor: 'pointer' }} onClick={() => window.location.href = 'mailto:support@crednow.ng'}>
                                         <p className='xui-opacity-8 xui-font-sz-85'>support@crednow.ng</p>
                                     </div>
                                 </div>
@@ -83,10 +83,10 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className='xui-d-flex xui-flex-dir-column'>
-                            <Link to={'/'} target='_blank' className='xui-d-inline-block'>
+                            {/* <Link to={'/'} target='_blank' className='xui-d-inline-block'>
                                 <img src={Appstore} alt="" className='xui-img-150' />
-                            </Link>
-                            <Link to={'/'} target='_blank' className='xui-d-inline-block xui-mt-half'>
+                            </Link> */}
+                            <Link to={'https://play.google.com/store/apps/details?id=com.credility.crednow'} target='_blank' className='xui-d-inline-block xui-mt-half'>
                                 <img src={Playstore} alt="" className='xui-img-150' />
                             </Link>
                         </div>
